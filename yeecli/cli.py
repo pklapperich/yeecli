@@ -146,6 +146,7 @@ def toggle():
 @click.option("--pulses", "-p", metavar='COUNT', type=int, default=2, help="The number of times to pulse.")
 def pulse(hex_color, pulses):
     """Pulse the bulb in a specific color."""
+    #TODO pulse temperature
     red, green, blue = hex_color_to_rgb(hex_color)
     transitions = tr.pulse(red, green, blue)
 
